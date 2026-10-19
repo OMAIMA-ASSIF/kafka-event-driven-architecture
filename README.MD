@@ -22,3 +22,9 @@ Creation d'un producer avec topic T2 via le controller
 kafka-Console-Consumer:
 
 ![img_5.png](img_5.png)
+
+Consumer au niveau de Spring
+
+-> ON fait refresh le navigateur (comme ci dessus)
+
+![img_6.png](img_6.png)
