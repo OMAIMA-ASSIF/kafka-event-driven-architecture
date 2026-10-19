@@ -14,3 +14,11 @@ Le consumer :
 Nouveau consumer qui peut consommer des le debut : 
 
 ![img_3.png](img_3.png)
+
+Creation d'un producer avec topic T2 via le controller
+
+![img_4.png](img_4.png)
+
+kafka-Console-Consumer:
+
+![img_5.png](img_5.png)
