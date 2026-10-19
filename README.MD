@@ -28,3 +28,7 @@ Consumer au niveau de Spring
 -> ON fait refresh le navigateur (comme ci dessus)
 
 ![img_6.png](img_6.png)
+
+Test avec un Supplier 
+
+![img_7.png](img_7.png)
