@@ -32,3 +32,7 @@ Consumer au niveau de Spring
 Test avec un Supplier 
 
 ![img_7.png](img_7.png)
+
+Kafka Stream Processing :
+
+![img_8.png](img_8.png)
