@@ -45,7 +45,7 @@ public class PageEventController {
                     Map<String,Long> stringLongMap=new HashMap<>();
                     ReadOnlyWindowStore<String, Long> windowStore = interactiveQueryService.getQueryableStore("count-store", QueryableStoreTypes.windowStore());
                     Instant now=Instant.now();
-                    Instant from=now.minusMillis(5000);
+                    Instant from = now.minusSeconds(5);
                     KeyValueIterator<Windowed<String>, Long> fetchAll = windowStore.fetchAll(from, now);
                     //WindowStoreIterator<Long> fetchAll = windowStore.fetch(page, from, now);
                     while (fetchAll.hasNext()){

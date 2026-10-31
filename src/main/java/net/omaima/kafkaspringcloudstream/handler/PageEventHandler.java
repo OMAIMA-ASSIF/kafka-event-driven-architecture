@@ -51,7 +51,7 @@ public class PageEventHandler {
                         .map((k,v)->new KeyValue<>(v.name(), v.duration()))
                         .groupByKey(Grouped.with(Serdes.String(), Serdes.Long()))
                         .windowedBy(TimeWindows.ofSizeAndGrace(
-                                Duration.ofSeconds(5000),
+                                Duration.ofSeconds(5),
                                 Duration.ofSeconds(0)
                         ))
                         .count(Materialized.as("count-store"))

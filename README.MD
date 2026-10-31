@@ -42,7 +42,7 @@ Ajout d'un traitement
 ![img_9.png](img_9.png)
 
 Récupérer périodiquement les statistiques de consommation des événements Kafka Streams et de les envoyer au client en temps réel via SSE
-
-![img_11.png](img_11.png)
+avec la methode flux 
 
 ![img_10.png](img_10.png)
+
