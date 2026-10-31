@@ -36,3 +36,7 @@ Test avec un Supplier
 Kafka Stream Processing :
 
 ![img_8.png](img_8.png)
+
+Ajout d'un traitement
+
+![img_9.png](img_9.png)

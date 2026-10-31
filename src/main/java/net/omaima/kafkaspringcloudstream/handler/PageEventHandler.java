@@ -1,7 +1,10 @@
 package net.omaima.kafkaspringcloudstream.handler;
 
 import net.omaima.kafkaspringcloudstream.event.PageEvent;
+import org.apache.kafka.common.serialization.Serde;
+import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KeyValue;
+import org.apache.kafka.streams.kstream.Grouped;
 import org.apache.kafka.streams.kstream.KStream;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -42,7 +45,10 @@ public class PageEventHandler {
     public Function<KStream<String, PageEvent>, KStream<String, Long>> kStreamFunction(){
         return (input)->
                 input.filter((k,v)->v.duration()>100)
-                        .map((k,v)->new KeyValue<>(v.name(), v.duration()));
+                        .map((k,v)->new KeyValue<>(v.name(), v.duration()))
+                        .groupByKey(Grouped.with(Serdes.String(), Serdes.Long()))
+                        .count()
+                        .toStream();
 
     }
 }
